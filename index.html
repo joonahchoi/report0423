@@ -101,10 +101,9 @@ transform: rotate(-90deg);
 <div class="flex justify-between items-center h-16">
 <div class="flex-shrink-0 flex items-center gap-2">
 <span class="text-2xl">🩺</span>
-<span class="font-bold text-xl tracking-tight text-primary">보건교육 AI 워크스페이스</span>
+<span class="font-bold text-xl tracking-tight text-primary">주나쌤의 AI 보건교육 워크스페이스</span>
 </div>
 <div class="hidden md:flex space-x-2 overflow-x-auto">
-<button onclick="scrollToSection('section-workshop')" class="px-4 py-2 rounded-md text-sm font-bold text-primary bg-blue-50 border border-blue-100">✨ AI 워크샵</button>
 <button onclick="scrollToSection('section-impact')" class="px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">도입 효과</button>
 <button onclick="scrollToSection('section-tools')" class="px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">도구 분석</button>
 <button onclick="scrollToSection('section-domains')" class="px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">영역별 활용</button>
@@ -122,43 +121,6 @@ transform: rotate(-90deg);
 </p>
 </header>
 
-<section id="section-workshop" class="scroll-mt-24">
-<div class="mb-8">
-<h2 class="text-2xl md:text-3xl font-bold text-textmain flex items-center gap-2">
-<span class="text-primary">✨</span> AI 보건교육 실시간 워크샵
-</h2>
-<p class="text-textsub mt-2">Gemini API를 활용하여 실제 수업에 필요한 활동지를 생성하고 복잡한 지침을 분석해보세요.</p>
-</div>
-
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4">
-<h3 class="text-xl font-bold text-textmain flex items-center gap-2">📝 수업 활동지 자동 생성기</h3>
-<p class="text-sm text-textsub">수업 주제를 입력하면 중학생 수준에 맞는 대화형 시나리오와 질문지를 생성합니다.</p>
-<textarea id="ai-input" class="w-full p-4 border border-gray-200 rounded-xl h-32 focus:ring-2 focus:ring-primary outline-none text-sm resize-none" placeholder="입력 예시: 스마트폰 과의존 예방을 위한 친구 간의 롤플레잉 대본과 토론 주제 2개 만들어줘"></textarea>
-<button onclick="generateAIContent()" id="generate-btn" class="w-full bg-primary text-white py-3 rounded-xl font-bold hover:bg-blue-600 transition-all flex items-center justify-center gap-2">
-<span>✨ 활동지 초안 생성하기</span>
-<div id="loading-gen" class="loading-spinner hidden"></div>
-</button>
-<div id="ai-result" class="bg-surface p-4 rounded-xl text-sm border border-gray-200 min-h-[150px] overflow-y-auto whitespace-pre-wrap text-textmain">결과가 이곳에 표시됩니다...</div>
-<button onclick="playTTS()" id="tts-btn" class="w-full bg-secondary text-white py-3 rounded-xl font-bold hover:bg-green-600 transition-all hidden flex items-center justify-center gap-2">
-<span>🔊 보건 선생님 음성으로 듣기 (TTS)</span>
-<div id="loading-tts" class="loading-spinner hidden"></div>
-</button>
-<audio id="audio-player" class="hidden"></audio>
-</div>
-
-<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4">
-<h3 class="text-xl font-bold text-textmain flex items-center gap-2">🔍 보건 지침 요약 분석기</h3>
-<p class="text-sm text-textsub">어려운 보건의료 지침이나 뉴스 기사를 중학생이 이해하기 쉽게 분석 및 요약합니다.</p>
-<textarea id="analyze-input" class="w-full p-4 border border-gray-200 rounded-xl h-32 focus:ring-2 focus:ring-accent outline-none text-sm resize-none" placeholder="질병관리청 예방수칙이나 보건 관련 뉴스 텍스트를 복사해서 붙여넣으세요..."></textarea>
-<button onclick="analyzeAIContent()" id="analyze-btn" class="w-full bg-accent text-white py-3 rounded-xl font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2">
-<span>🔍 핵심 내용 요약 및 퀴즈 생성</span>
-<div id="loading-analyze" class="loading-spinner hidden"></div>
-</button>
-<div id="analyze-result" class="bg-amber-50 p-4 rounded-xl text-sm border border-amber-100 min-h-[150px] overflow-y-auto whitespace-pre-wrap text-textmain">분석 결과가 이곳에 표시됩니다...</div>
-</div>
-</div>
-</section>
 
 <section id="section-impact" class="scroll-mt-24">
 <div class="mb-8">
